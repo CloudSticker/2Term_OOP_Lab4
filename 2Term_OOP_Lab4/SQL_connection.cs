@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Threading;
 
 
 namespace _2Term_OOP_Lab4
@@ -30,7 +31,7 @@ namespace _2Term_OOP_Lab4
                 if (connection.State == ConnectionState.Open)
                 {
                     // закрываем подключение
-                    await connection.CloseAsync();
+                    connection.Close();
                     Console.WriteLine("Подключение закрыто...");
                 }
             }
