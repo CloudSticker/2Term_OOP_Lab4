@@ -23,6 +23,8 @@ namespace _2Term_OOP_Lab4
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MainWindowVM();
         }
     }
 }
